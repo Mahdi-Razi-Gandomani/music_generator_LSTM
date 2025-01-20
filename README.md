@@ -58,7 +58,7 @@ To run this code, you need the following Python libraries:
 2. Run the script to train the model and generate music:
 
    ```bash
-   python music_generation.py
+   python music_LSTM.py
 
 3. The generated MIDI file will be saved as `generated_midi.mid`.
     
