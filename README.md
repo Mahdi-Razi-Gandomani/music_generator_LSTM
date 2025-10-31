@@ -59,7 +59,7 @@ These will be used to train the model.
 Execute the Python file:
 
 ```bash
-python music_LSTM.py
+python3 music_LSTM.py
 ```
 
 The script will:
