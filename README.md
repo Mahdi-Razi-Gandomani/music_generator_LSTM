@@ -4,16 +4,6 @@ This project generates original MIDI music using a **Long Short-Term Memory (LST
 
 ---
 
-## Requirements
-
-To run this code, you need the following Python libraries:
-
-- `numpy`
-- `music21`
-- `tensorflow`
-
----
-
 ## Code Structure
 
 ### MIDI File Processing
