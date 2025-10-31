@@ -1,6 +1,6 @@
 # Music Generation with LSTM
 
-This project uses a Long Short-Term Memory (LSTM) neural network to generate music. The model is trained on MIDI files from Bach's compositions and can generate new musical sequences.
+This project generates original MIDI music using a **Long Short-Term Memory (LSTM)** neural network trained on existing MIDI files. The model learns sequences of notes and chords to compose new melodies.
 
 ---
 
@@ -18,7 +18,7 @@ To run this code, you need the following Python libraries:
 
 ### MIDI File Processing
 - **Loading MIDI Files**: 
-  - The script loads MIDI files from a specified directory (`bach/`).
+  - Loads MIDI files from an input directory.
   - Files with the `.mid` extension are parsed using `music21.converter`.
 
 - **Extracting Notes and Chords**:
@@ -50,15 +50,35 @@ To run this code, you need the following Python libraries:
   - The stream is saved as a MIDI file (`generated_midi.mid`).
 
 ---
-
 ## Usage
 
-1. Place MIDI files in the `bach/` directory.
+### 0. Clone the Repository
 
-2. Run the script to train the model and generate music:
+```bash
+git clone https://github.com/Mahdi-Razi-Gandomani/music_generator_LSTM.git
+cd music_generator_LSTM
+```
 
-   ```bash
-   python music_LSTM.py
+### 1. Add MIDI Files
 
-3. The generated MIDI file will be saved as `generated_midi.mid`.
-    
+Place your training `.mid` files inside the `input/` folder.  
+These will be used to train the model.
+
+### 2. Run the Script
+
+Execute the Python file:
+
+```bash
+python music_LSTM.py
+```
+
+The script will:
+
+- Parse and extract notes from your input files  
+- Train an LSTM model  
+- Generate a new sequence of notes  
+- Save it as `generated_midi.mid` in your working directory  
+
+### 3. Play the Generated Music
+
+Open `generated_midi.mid` in a MIDI player.
