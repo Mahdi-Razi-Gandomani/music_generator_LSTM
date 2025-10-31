@@ -6,7 +6,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Dropout
 
 # Load midi files
-filepath = "bach/"
+filepath = "input/"
 midi_files = []
 for file in os.listdir(filepath):
     if file.endswith(".mid"):
@@ -87,10 +87,10 @@ def generator(note_length):
     notes = []
     for _ in range(note_length):
         patt = patt.reshape(1, sequence_length, 1)
-        prediction = model.predict(patt, verbose=0)  # Predict next note
-        index = np.argmax(prediction)  # Get the most likely note
-        notes.append(index_to_symbol[index])  # Convert index to note
-        patt = np.append(patt[0], index)  # Update sequence
+        prediction = model.predict(patt, verbose=0)
+        index = np.argmax(prediction)
+        notes.append(index_to_symbol[index])
+        patt = np.append(patt[0], index)
         patt = patt[1:].reshape(sequence_length, 1)
     return melody_from_notes(notes)
 
