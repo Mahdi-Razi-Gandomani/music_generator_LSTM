@@ -62,12 +62,7 @@ Execute the Python file:
 python3 music_LSTM.py
 ```
 
-The script will:
-
-- Parse and extract notes from your input files  
-- Train an LSTM model  
-- Generate a new sequence of notes  
-- Save it as `generated_midi.mid` in your working directory  
+The script will generate a new sequence of notes and save it as `generated_midi.mid` in your working directory
 
 ### 3. Play the Generated Music
 
