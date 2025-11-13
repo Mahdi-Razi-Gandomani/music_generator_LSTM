@@ -78,7 +78,7 @@ def melody_from_notes(s):
             note_s = note.Note(i)
             note_s.offset = offset
             melody.append(note_s)
-        offset += 1  # Increment offset
+        offset += 1
     return stream.Stream(melody)
 
 # Generate music using the trained model
